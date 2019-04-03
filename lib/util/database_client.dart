@@ -31,6 +31,7 @@ class DatabaseHelper {
     Directory documentDirectory = await getApplicationDocumentsDirectory();
     String path = join(documentDirectory.path, "nodo_db.db");
     var ourDb = await openDatabase(path, version: 1, onCreate: _onCreate);
+    return ourDb;
   }
 
   void _onCreate(Database db, int version) async {
