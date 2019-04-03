@@ -8,6 +8,22 @@ class NoTodoScreen extends StatefulWidget {
 class _NoTodoScreenState extends State<NoTodoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return new Scaffold(
+      backgroundColor: Colors.black87,
+      body: Column(),
+
+      floatingActionButton: new FloatingActionButton(
+          tooltip: "Add Item",
+          backgroundColor: Colors.redAccent,
+          child: new ListTile(
+            title: new Icon(Icons.add)
+          ),
+          onPressed: _showFormDialog
+      ),
+    );
+  }
+
+  void _showFormDialog(){
+
   }
 }
